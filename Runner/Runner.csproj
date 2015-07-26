@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StatePrinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=693eec472ad792e3, processorArchitecture=MSIL">
-      <HintPath>..\packages\StatePrinter.2.1.220\lib\net35\StatePrinter.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,7 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\StatePrinter\StatePrinter\StatePrinter.csproj">
+      <Project>{10181C0E-31FF-48B3-A293-D9ED83D38C8D}</Project>
+      <Name>StatePrinter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComplexObjectGraph\ComplexObjectGraph.csproj">
+      <Project>{82DA4AF3-8075-4115-A57F-9E9EFD90C539}</Project>
+      <Name>ComplexObjectGraph</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
